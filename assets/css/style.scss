@@ -1,0 +1,126 @@
+html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+    line-height: 1;
+}
+
+body {
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+img {
+    width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+button {
+    outline: none;
+}
+
+.content {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    margin-top: 2rem;
+
+    &__left {
+        width: 65%;
+
+        &-game {
+            display: flex;
+            flex-wrap: wrap;
+
+            .item {
+                width: 6.6%;
+                height: 4.7rem;
+                border: solid 1px #cccccc;
+                border-radius: 0.3rem;
+                box-sizing: border-box;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 3rem;
+            }
+        }
+    }
+
+    &__right {
+        width: 35%;
+
+        &-times {
+            padding-bottom: 1rem;
+            text-align: center;
+            position: relative;
+            span {
+                font-size: 5rem;
+            }
+
+            #gap {
+                margin: 0 1rem;
+            }
+
+            &::before{
+                position: absolute;
+                content: '';
+                width: 75%;
+                left: 12.5%;
+                height: 1px;
+                bottom: 0;
+                background-color: #cccccc;
+            }
+        }
+        &-header{
+            text-align: center;
+            >h4{
+                height: 40rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 4rem;
+            }
+            > button{
+                width: 20rem;
+                height: 5rem;
+                font-size: 2rem;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+#start {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    background-color: #cccccc;
+    .modal__start{
+        margin: auto;
+        width: 50%;
+        cursor: pointer;
+    }
+}
+.fade{
+    opacity: 0;
+    transition: opacity 1s;
+}
+.indexDown{
+    z-index: -1;
+}
